@@ -1,0 +1,28 @@
+flows:
+  greet_user:
+    description: greet the user and welcome him to the chat
+    steps:
+      - action: utter_greet_user
+      
+      - collect: user_name
+        description: the user name
+        
+      - collect: cadastro_pessoa_f
+        description: an 11 digits number
+        
+      - collect: user_type
+      - noop: true
+        next: 
+          - if: slots.user_type == "especialidades"
+            then:
+              - link: specialties
+          - if: slots.user_type == "cadastro"
+            then:
+              - link: registration
+          # - if: slots.user_type == "consultas"
+          #   then:
+          #     - link: appointment
+          - else:
+              END
+        
+        

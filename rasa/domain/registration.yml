@@ -1,0 +1,10 @@
+version: "3.1"
+
+responses:
+
+  utter_registration:
+    - text: |
+        O seu cadastro é {user_name}
+        CPF: {cadastro_pessoa_f}
+        Data de nascimento: ...
+        Número de telefone: ...

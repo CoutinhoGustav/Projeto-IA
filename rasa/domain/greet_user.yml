@@ -1,0 +1,34 @@
+version: "3.1"
+
+slots:
+  user_name:
+    type: text
+    mappings:
+      - type: from_llm
+  cadastro_pessoa_f:
+    type: float
+    mappings:
+      - type: from_llm
+  user_type:
+    type: text
+    mappings:
+      - type: from_llm
+    influence_conversation: true
+
+responses:
+  utter_greet_user:
+    - text: "Olá sejá bem-vindo ao nosso atendimento inteligente de agendamento de consultas!"
+  
+  utter_ask_user_name:
+    - text: "Você poderia me informar seu nome?"
+
+  utter_ask_cadastro_pessoa_f:
+    - text: "Agora seu CPF, por favor."
+
+  utter_ask_user_type:
+    - text: |
+        Como podemos te auxiliar hoje, {user_name}?
+      
+        1. Especialidades
+        2. Consultas
+        3. Cadastro
