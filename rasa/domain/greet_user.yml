@@ -1,0 +1,47 @@
+version: "3.1"
+
+slots:
+  user_name:
+    type: text
+    mappings:
+      - type: from_llm
+
+  cadastro_pessoa_f:
+    type: text
+    mappings:
+      - type: from_llm
+    validation:
+      rejections:
+        - if: not (slots.cadastro_pessoa_f matches "^\d{3}\.\d{3}\.\d{3}-\d{2}$|^\d{11}$")
+          utter: utter_invalid_cpf
+      refill_utter: "utter_refill_cadastro_pessoa_f"
+      
+  user_type:
+    type: text
+    mappings:
+      - type: from_llm
+    influence_conversation: true
+
+responses:
+  utter_greet_user:
+    - text: "Olá sejá bem-vindo ao nosso atendimento inteligente de agendamento de consultas!"
+  
+  utter_ask_user_name:
+    - text: "Você poderia me informar seu nome?"
+
+  utter_ask_cadastro_pessoa_f:
+    - text: "Agora seu CPF, por favor."
+
+  utter_invalid_cpf:
+    - text: "CPF inválido"
+
+  utter_refill_cadastro_pessoa_f:
+    - text: "Digite um CPF válido"
+
+  utter_ask_user_type:
+    - text: |
+        Como podemos te auxiliar hoje, {user_name}?
+      
+        1. Especialidades
+        2. Consultas
+        3. Cadastro
