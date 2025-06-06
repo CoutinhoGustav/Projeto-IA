@@ -1,0 +1,13 @@
+recipe: default.v1
+language: pt-BR
+pipeline:
+- name: SingleStepLLMCommandGenerator
+  llm:
+    model_group: rasa_command_generation_model
+  flow_retrieval:
+    active: false
+
+policies:
+- name: FlowPolicy
+# - name: IntentlessPolicy
+assistant_id: 20250516-104701-loyal-node

@@ -1,0 +1,5 @@
+flows:
+  registration:
+    description: tell the user about his registration
+    steps:
+      - action: utter_registration
