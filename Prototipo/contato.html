@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicos</title>
+    <title>Contato - Consultório Saúde+</title>
     <script src="https://kit.fontawesome.com/46b7ceee20.js" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
 
         :root {
             /* colors */
@@ -26,8 +24,8 @@
             --cardContainer: #7ab6ce;
             --shadowColor: rgba(0, 0, 0, 0.15);
 
-
             /* texts */
+            
             --fs-header: 24px;
             --fs-hero-header: 36px;
             --fs-hero-body: 20px;
@@ -40,27 +38,27 @@
 
         .dark-theme {
             /* colors */
-            --primaryColor: #13163a; /* Adjusted for a medical feel, can be changed */
-            --secondaryColor: #98c2d3;  /* Adjusted for a medical feel, can be changed */
+            --primaryColor: #13163a; 
+            --secondaryColor: #98c2d3;  
             --mainTxtColor: #f0f0f0;
             --heroContentSpanColor: #151515; 
             --socialIconColor: #98c2d3;
             --cardContainer: #7ab6ce;
-            --cardBgColor: #2c2c2c; /* Darker card background */
-            --shadowColor: rgba(255, 255, 255, 0.1); /* Lighter shadow for dark theme */
+            --cardBgColor: #2c2c2c; 
+            --shadowColor: rgba(255, 255, 255, 0.1); 
 
-
+            /* texts */
             /* texts */
             --fs-header: 24px;
             --fs-hero-header: 36px;
             --fs-hero-body: 20px;
+            --fs-hero-btn: 20px;
             --fw-header: 700;
             --fw-hero-header: 700;
             --fw-hero-body: 400;
             --fw-hero-btn: 700;
         }
-
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -191,31 +189,31 @@
             animation: navbar 1s ease forwards;
         }
 
+
+
         /* Content Container Styling */
         .content-container {
-               background-color: var(--cardContainer);
-    padding: 40px;
-    border-radius: 12px;
-    /* box-shadow: 0 8px 20px var(--shadowColor); */
-    margin-bottom: 40px;
-    text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    width: 100%;
-    max-width: 900px;
-    margin-top: 40px;
-
+            background-color: var(--cardContainer);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 900px;
+            margin-top: 40px;
         }
 
         .content-container h2 {
             color: var(--mainTxtColor);
             margin-bottom: 20px;
-            font-size: 42px;
-            font-weight: 700;
+            font-size: var(--fs-hero-header); /* Usando a variável de tamanho de fonte */
+            font-weight: var(--fw-hero-header); /* Usando a variável de peso de fonte */
         }
 
         .content-container p {
-            font-size: 20px;
-            font-weight: 400;
+            font-size: var(--fs-hero-body); /* Usando a variável de tamanho de fonte */
+            font-weight: var(--fw-hero-body); /* Usando a variável de peso de fonte */
             color: var(--mainTxtColor);
             margin-bottom: 15px;
         }
@@ -224,7 +222,7 @@
             list-style: none;
             padding: 0;
             margin-top: 20px;
-            font-size: 18px;
+            font-size: var(--fs-hero-body); /* Usando a variável de tamanho de fonte */
             color: var(--mainTxtColor);
         }
 
@@ -232,22 +230,72 @@
             margin-bottom: 10px;
             padding: 8px 0;
             border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+            font-size: 18px; /* Mantido em 18px para itens de lista, se desejar mudar para var, use --fs-hero-body */
         }
 
         .content-container ul li:last-child {
             border-bottom: none;
         }
 
-        /* Social Icon List Styling (from Site.html) */
+        /* Contact Form Styling */
+        .contact-form {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: var(--fw-hero-body); /* Usando a variável de peso de fonte */
+            color: var(--mainTxtColor);
+            font-size: var(--fs-hero-body); /* Usando a variável de tamanho de fonte */
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: var(--fs-hero-body); /* Usando a variável de tamanho de fonte */
+            background-color: var(--mainTxtColor); 
+            color: var(--secondaryColor); 
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form button {
+            background-color: var(--secondaryColor);
+            color: var(--btnTxtColor);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: var(--fs-hero-btn); /* Usando a variável de tamanho de fonte */
+            font-weight: var(--fw-hero-btn); /* Usando a variável de peso de fonte */
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: darken(var(--secondaryColor), 10%);
+        }
+
+        /* Social Icon List Styling */
         .social-icon-list {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 138px;
-            position: absolute;
-            bottom: -291px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: relative; /* Mudado para relative para posicionamento flexível */
+            margin-top: 40px; /* Adicionado margem superior para espaçamento */
         }
 
         .social-icon-list a {
@@ -289,7 +337,7 @@
             background-color: var(--secondaryColor);
         }
 
-        /* Animations from Site.html */
+        /* Animations */
         @keyframes navbar {
             0% {
                 transform: translateY(-100%);
@@ -319,7 +367,7 @@
             }
         }
 
-        /* Media Queries (from Site.html) */
+        /* Media Queries */
         @media (max-width: 767px) {
             .home-page {
                 padding: 20px;
@@ -333,7 +381,7 @@
             }
 
             .header-logo {
-                font-size: 24px;
+                font-size: var(--fs-header); /* Mantendo a consistência */
             }
 
             .header-nav {
@@ -376,11 +424,12 @@
 
             .mobile-nav-icon {
                 display: block;
-                font-size: 28px;
+                font-size: var(--fs-header); /* Mantendo a consistência */
                 margin: -3px 0px 0px 187px;
             }
 
             .theme-change {
+                font-size: var(--fs-header); /* Mantendo a consistência */
                 cursor: pointer;
                 color: var(--mainTxtColor);
                 animation: navbar 1s ease forwards;
@@ -392,7 +441,7 @@
             }
 
             .content-container h2 {
-                font-size: 30px;
+                font-size: var(--fs-hero-header); /* Mantendo a consistência */
             }
 
             .social-icon-list {
@@ -424,7 +473,7 @@
             }
 
             .header-logo {
-                font-size: 26px;
+                font-size: var(--fs-header); /* Mantendo a consistência */
             }
 
             .header-nav {
@@ -454,10 +503,11 @@
 
             .mobile-nav-icon {
                 display: block;
-                font-size: 26px;
+                font-size: var(--fs-header); /* Mantendo a consistência */
                 margin: 0px 0px 0px 586px;
             }
             .theme-change {
+                font-size: var(--fs-header); /* Mantendo a consistência */
                 margin: 0px 0px;
                 cursor: pointer;
                 color: var(--mainTxtColor);
@@ -469,7 +519,7 @@
             }
 
             .content-container h2 {
-                font-size: 32px;
+                font-size: var(--fs-hero-header); /* Mantendo a consistência */
             }
 
             .social-icon-list {
@@ -501,9 +551,9 @@
                 </div>
                 <ul class="header-nav-list" id="headerNavList">
                     <li><a href="./Site.html">Home</a></li>
-                    <li class="active"><a href="./Servicos.html">Serviços</a></li>
+                    <li><a href="./Servicos.html">Serviços</a></li>
                     <li><a href="./sobre.html">Sobre Nós</a></li>
-                    <li><a href="./Contato.html">Contato</a></li>
+                    <li class="active"><a href="./Contato.html">Contato</a></li>
                 </ul>
                 <div class="theme-change">
                     <i class="fa-solid fa-moon" id="themeChangeIcon"></i>
@@ -512,26 +562,38 @@
         </section>
 
         <div class="content-container">
-            <section id="our-services" class="mb-4">
-                <h2>Nossos Serviços</h2>
-                <p>Oferecemos uma variedade de serviços médicos para atender suas necessidades:</p>
+            <h2>Entre em Contato</h2>
+            <p>Tem alguma dúvida ou gostaria de agendar uma consulta? Preencha o formulário abaixo ou utilize nossos canais de contato direto.</p>
+
+            <section id="contact-info" class="mb-4">
                 <ul>
-                    <li>Consulta Geral - Dr. João Silva</li>
-                    <li>Pediatria - Dra. Maria Oliveira</li>
-                    <li>Cardiologia - Dr. Carlos Mendes</li>
-                    <li>Dermatologia - Dra. Ana Souza</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Endereço: Rua da Saúde, 123 - Centro, Cidade, Brasil</li>
+                    <li><i class="fas fa-phone"></i> Telefone: (XX) XXXX-XXXX</li>
+                    <li><i class="fas fa-envelope"></i> Email: contato@consultoriosaude.com.br</li>
+                    <li><i class="fab fa-whatsapp"></i> WhatsApp: (XX) XXXXX-XXXX</li>
                 </ul>
             </section>
 
-            <section id="service-hours" class="mb-4">
-                <h2>Serviços e Horários</h2>
-                <p>Confira nossos serviços e horários de funcionamento:</p>
-                <ul>
-                    <li>Dr. João Silva (Consulta Geral) - Segunda a Sexta: 8h às 12h</li>
-                    <li>Dra. Maria Oliveira (Pediatria) - Segunda a Sexta: 13h às 17h</li>
-                    <li>Dr. Carlos Mendes (Cardiologia) - Terça e Quinta: 9h às 15h</li>
-                    <li>Dra. Ana Souza (Dermatologia) - Quarta e Sexta: 10h às 16h</li>
-                </ul>
+            <section id="contact-form-section" class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Seu Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Seu E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Assunto:</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Sua Mensagem:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
             </section>
         </div>
 
@@ -577,7 +639,7 @@
         }
 
         // Load saved theme from localStorage
-        const savedTheme = localStorage.getItem('theme') || 'light'; // Defaults to 'light' if nothing saved
+        const savedTheme = localStorage.getItem('theme') || 'light'; 
         applyTheme(savedTheme);
 
         // Event listener for theme change
@@ -591,7 +653,7 @@
                 themeChangeIcon.classList.remove('fa-sun');
                 themeChangeIcon.classList.add('fa-moon');
             }
-            localStorage.setItem('theme', theme); // Save theme to localStorage
+            localStorage.setItem('theme', theme); 
         });
 
         // Event for mobile navigation icon
