@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Importando Link do React Router
+import { Link } from 'react-router-dom'; // Importando Link para o React Router
 import './Contato.css';
 
 const Contato = () => {
