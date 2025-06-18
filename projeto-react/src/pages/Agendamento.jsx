@@ -68,7 +68,7 @@ const Agendamento = () => {
         </div>
         <div className="card-body chatbot-body">
           <p className="text-left">
-            Bem-vindo(a)! Sou a IA Catharina, digite oi para começarmos.
+            Bem-vindo(a)! Sou a IA Aura, digite oi para começarmos.
           </p>
           {/* Chat messages serão renderizadas aqui */}
         </div>
