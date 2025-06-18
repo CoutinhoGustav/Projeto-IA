@@ -1,3 +1,4 @@
 /.qodo
 .venv
 conteudo-auxiliar/
+node_modules
