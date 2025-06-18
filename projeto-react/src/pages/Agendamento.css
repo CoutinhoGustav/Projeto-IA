@@ -12,8 +12,8 @@
 
         .dark-theme {
             /* colors */
-            --primaryColor:#13163a; /* Adjusted for a medical feel, can be changed */
-            --secondaryColor: #98c2d3;  /* Adjusted for a medical feel, can be changed */
+            --primaryColor:#13163a;
+            --secondaryColor: #98c2d3; 
             --mainTxtColor: #f0f0f0;
             --heroContentSpanColor: #151515; 
             --btnTxtColor: #f0f0f0; 
