@@ -64,7 +64,7 @@ Sistema robusto de gerenciamento com endpoints para:
 - Implementação de conexões com WhatsApp API
 - Desenvolvimento e execução de testes
 
-### 👨‍💻 **Gustavo, Darla e Rebeca** - Frontend Developer
+### 👨‍💻 **Gustavo, Rebeca e Darla** - Frontend Developer
 **Responsabilidades:**
 - Desenvolvimento da interface React
 - Implementação de componentes de chat
