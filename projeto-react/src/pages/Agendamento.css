@@ -123,9 +123,9 @@
             transition: color 0.3s;
         }
 
-.close-chatbot-button:hover {
-  color: var(--accentColor);
-}
+        .close-chatbot-button:hover {
+        color: var(--accentColor);
+        }
 
         .chatbot-input button:hover {
             color: var(--secondaryColor);
