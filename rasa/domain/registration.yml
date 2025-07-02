@@ -1,10 +1,21 @@
 version: "3.1"
 
-responses:
+slots:
+  change_registration:
+    type: text
+    mappings:
+      - type: from_llm
 
+responses:
   utter_registration:
     - text: |
-        O seu cadastro é {user_name}
+        {user_name} seu cadastro é:
         CPF: {cadastro_pessoa_f}
         Data de nascimento: ...
         Número de telefone: ...
+  
+  utter_ask_change_registration:
+    - text: "Você quer mudar alguma informação do seu cadastro"
+
+  utter_can_do_something_else:
+    - text: "O que mais posso fazer por você?"

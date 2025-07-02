@@ -1,5 +1,8 @@
 version: "3.1"
 
+actions:
+  - action_check_existing_user
+
 slots:
   user_name:
     type: text
@@ -16,11 +19,16 @@ slots:
           utter: utter_invalid_cpf
       refill_utter: "utter_refill_cadastro_pessoa_f"
       
-  user_type:
-    type: text
+  # user_type:
+  #   type: text
+  #   mappings:
+  #     - type: from_llm
+  #   influence_conversation: true
+
+  user_exists:
+    type: bool
     mappings:
-      - type: from_llm
-    influence_conversation: true
+      - type: controlled
 
 responses:
   utter_greet_user:
@@ -32,16 +40,17 @@ responses:
   utter_ask_cadastro_pessoa_f:
     - text: "Agora seu CPF, por favor."
 
+  utter_inexistant_user:
+    - text: "Esse usuário não possui uma conta, vamos realizar o seu registro"
+
   utter_invalid_cpf:
     - text: "CPF inválido"
 
   utter_refill_cadastro_pessoa_f:
     - text: "Digite um CPF válido"
 
-  utter_ask_user_type:
+  utter_introduce_user:
     - text: |
-        Como podemos te auxiliar hoje, {user_name}?
-      
-        1. Especialidades
-        2. Consultas
-        3. Cadastro
+        Seja bem vindo a nossa plataforma {user_name}
+        Com o que posso te ajudar hoje? 
+        Sou capaz de te auxiliar com diversas coisas, seja com suas consultas, seu cadastro e eventuais dúvidas sobre nossas especialidades.
