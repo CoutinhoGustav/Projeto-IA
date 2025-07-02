@@ -27,6 +27,12 @@ def get_db():
 
 # --- Rotas Usuários ---
 
+@app.get("/")
+def root():
+    return {"message": "API rodando! Acesse /usuarios para interagir."}
+
+
+
 @app.get("/usuarios", response_model=list[schemas.Usuario])
 def listar_usuarios(db: Session = Depends(get_db)):
     return crud.get_usuarios(db)
