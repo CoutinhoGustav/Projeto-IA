@@ -96,3 +96,8 @@ npm start
 # Banco de Dados
 # Configure as credenciais MySQL
 # Execute os scripts de SQL
+
+# Rasa Pro
+# Requisitos: Python 3.10 ou 3.11
+
+# Atualize o 
