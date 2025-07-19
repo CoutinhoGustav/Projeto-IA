@@ -2,13 +2,13 @@
 
 ## Descrição do Projeto
 
-Sistema completo de agendamento médico desenvolvido para facilitar o gerenciamento de consultas, especialidades e atendimentos. A aplicação integra um chatbot inteligente via WhatsApp para melhorar a experiência do usuário e automatizar processos de agendamento.
+Sistema completo de agendamento médico desenvolvido para facilitar o gerenciamento de consultas, especialidades e atendimentos. A aplicação integra um chatbot inteligente para melhorar a experiência do usuário e automatizar processos de agendamento.
 
 ## Tecnologias Utilizadas
 
 - **Backend**: Python com CRUD de atendimentos, especialidades e médicos
-- **Integração**: WhatsApp API para comunicação automatizada
-- **Chatbot**: Sistema de diálogo inteligente com fluxo personalizado
+- **Integração**: FastApi
+- **Chatbot**: Sistema de diálogo inteligente com fluxo personalizado com Rasa
 - **Banco de Dados**: MySQL para modelagem e armazenamento de dados
 - **Frontend**: React e CSS
 - **Componentes**: Interfaces de chat e telas de agendamento responsivas
@@ -44,7 +44,7 @@ Sistema robusto de gerenciamento com endpoints para:
 - Gestão de especialidades e médicos
 - Arquitetura e estruturação do sistema
 
-### Chatbot IA - Luis H
+### Chatbot IA - Catharina, Darla, Gustavo e Luciana
 **Responsabilidades:**
 - Implementação do chatbot
 - Fluxo de diálogo para agendamento
@@ -82,11 +82,14 @@ Sistema robusto de gerenciamento com endpoints para:
 git clone [url-do-repositorio]
 
 # Backend (Python)
-cd backend
-pip install -r requirements.txt
-python app.py
+cd projeto-IA-final (duas vezes)
+cd Backend
+pip install uvicorn
+ativar o ven: source venv/Scripts/active
+executar: uvicorn main:app --reload ou uvicorn Backend.main:app --reload(recomendado)
 
 # Frontend (React)
+cd projeto-IA-final (duas vezes)
 cd frontend
 cd projeto-react
 npm install (se for necessário)
