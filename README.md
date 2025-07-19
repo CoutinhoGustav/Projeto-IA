@@ -96,3 +96,42 @@ npm start
 # Banco de Dados
 # Configure as credenciais MySQL
 # Execute os scripts de SQL
+
+# Instalação do Rasa Pro
+
+cd rasa
+
+# Crie um ambiente virtual
+python -m venv venv
+
+# Ative o ambiente virtual
+.\venv\Scripts\activate
+
+# Instale o package manager do uv
+# macOS e Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Windows
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# Instale o uv
+pip install uv
+
+# Atualize o pip pra versão mais recente
+python -m pip install --upgrade pip
+
+# Instale o Rasa Pro
+uv pip install rasa-pro
+
+# Crie um ambiente virtual
+python -m venv venv
+
+# Ative a licença do Rasa Pro (O Hash está no arquivo .env na pasta rasa)
+# macOS e Linux
+export RASA_PRO_LICENSE=YOUR_LICENSE_KEY
+
+# Windows
+set RASA_PRO_LICENSE=YOUR_LICENSE_KEY
+
+# Verifique a instalação
+rasa --version
